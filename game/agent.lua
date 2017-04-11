@@ -3,6 +3,8 @@ local message = require "message"
 local protobuf = require "protobuf"
 local dispatcher = require "dispatcher"
 local env = require "env"
+local lobby_mgr = require "lobby.mgr"
+local socket = require "socket"
 
 local UID
 local SUB_ID
@@ -64,6 +66,7 @@ function CMD.auth(source, uid, client_fd)
 end
 
 function CMD.online(source, uid, client_fd)
+	lobby_mgr.register()
 	skynet.call("online", "lua", "online", uid, client_fd)
 end
 

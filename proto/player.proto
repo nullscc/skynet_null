@@ -1,9 +1,7 @@
 package player;
 
-message heartbeat {
-    required string name =1;
+message c2s_heartbeat {
 }
 
-message heartbeat1 {
-
+message s2c_heartbeat {
 }
