@@ -1,6 +1,6 @@
 local CDispatcher = class()
 
-function CDispatcher:actor()
+function CDispatcher:ctor()
 	self.routines = {}
 end
 
