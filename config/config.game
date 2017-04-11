@@ -1,0 +1,19 @@
+skynetroot = "./skynet/"
+thread = 8
+logger = nil
+harbor = 0
+start = "main"
+bootstrap = "snlua bootstrap"	-- The service for bootstrap
+luaservice = skynetroot .. "service/?.lua;".."./game/?.lua"
+lualoader = skynetroot .. "lualib/loader.lua"
+cpath = skynetroot .. "./cservice/?.so"
+lua_cpath = skynetroot .. "luaclib/?.so;" .. "./luaclib/?.so"
+lua_path = skynetroot .. "lualib/?.lua;".."./lualib/?.lua;".."./game/?.lua;".."./common/?.lua"
+cluster = "./cluster/cname.lua"
+preload = "common/preload.lua"
+
+-- cluster 节点名
+nodename = "game"
+debug_port = 9001
+port = 10001
+maxclient = 1024

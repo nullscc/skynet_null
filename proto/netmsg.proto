@@ -1,0 +1,10 @@
+package netmsg;
+
+message NetMsg {
+	required string name = 1;
+	required bytes payload = 2;
+}
+
+message LogoutRequest {
+	
+}

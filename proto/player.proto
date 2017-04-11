@@ -1,0 +1,9 @@
+package player;
+
+message heartbeat {
+    required string name =1;
+}
+
+message heartbeat1 {
+
+}
