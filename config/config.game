@@ -4,7 +4,7 @@ logger = nil
 harbor = 0
 start = "main"
 bootstrap = "snlua bootstrap"	-- The service for bootstrap
-luaservice = skynetroot .. "service/?.lua;".."./game/?.lua"
+luaservice = skynetroot .. "service/?.lua;".."service/?.lua;".."./game/?.lua"
 lualoader = skynetroot .. "lualib/loader.lua"
 cpath = skynetroot .. "./cservice/?.so"
 lua_cpath = skynetroot .. "luaclib/?.so;" .. "./luaclib/?.so"
@@ -17,3 +17,10 @@ nodename = "game"
 debug_port = 9001
 port = 10001
 maxclient = 1024
+
+-- 数据库配置
+redis_maxinst = 8
+redis_host    = "127.0.0.1"
+redis_port    = 6380
+redis_index   = 1
+redis_auth    = "123456"
